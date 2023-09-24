@@ -8,6 +8,17 @@
       "expo-router"
     ],
     "name": "job-match",
-    "slug": "job-match"
+    "slug": "job-match",
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "0402e68d-6350-4d75-93d8-7f086471bd3a"
+      }
+    },
+    "android": {
+      "package": "com.arturolopm.jobmatch"
+    }
   }
 }
