@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
-import { RAPID_API_KEY } from '@env';
+import { RAPID_API_KEY } from '../constants';
 
 const rapidApiKey = RAPID_API_KEY;
 const useFetch = (endpoint, query) => {

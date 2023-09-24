@@ -29,13 +29,15 @@ const JobDetails = () => {
   const { data, error, isLoading, refetch } = useFetch('job-details', {
     job_id: params.id
   });
-  console.log(data[0]);
 
   const [refreshing, setRefreshing] = useState(false);
   const [activeTab, setActiveTab] = useState(tabs[0]);
 
-  const onRefresh = () => {};
-
+  const onRefresh = useCallback(()=>{
+    setRefreshing(true)
+    refetch()
+    setRefreshing(false);
+  },[])
   const displayTabContent = () => {
     switch (activeTab) {
       case 'Quaifications':
@@ -63,7 +65,8 @@ const JobDetails = () => {
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.lightWhite }}>
-      {/* <Stack.Screen
+      
+      <Stack.Screen
         options={{
           headerStyle: { backgroundColor: COLORS.lightWhite },
           headerShadowVisible: false,
@@ -83,7 +86,7 @@ const JobDetails = () => {
           ),
           headerTitle: ''
         }}
-      > */}
+      />
       <>
         <ScrollView
           showsVerticalScrollIndicator={false}

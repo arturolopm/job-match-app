@@ -1,0 +1,1 @@
+export const RAPID_API_KEY="b5e96ff0c4msh6cf3f4fedff98ccp1158bajsn8ea89afaa4a0"
